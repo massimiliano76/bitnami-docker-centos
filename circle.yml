@@ -8,9 +8,9 @@ jobs:
           RELEASE_SERIES_LIST: "7"
           LATEST_STABLE: "7"
           IMAGE_NAME: centos
-          DOCKER_PROJECT: tompizmor
-          QUAY_PROJECT: tompizmor
-          #GCLOUD_PROJECT: bitnami-containers
+          DOCKER_PROJECT: bitnami
+          QUAY_PROJECT: bitnami
+          GCLOUD_PROJECT: bitnami-containers
 
     steps:
       - checkout
