@@ -1,18 +1,18 @@
-[![CircleCI](https://circleci.com/gh/bitnami/centos-extas/tree/master.svg?style=shield)](https://circleci.com/gh/bitnami/centos-extas/tree/master)
-[![Docker Hub Automated Build](http://container.checkforupdates.com/badges/bitnami/centos-extas)](https://hub.docker.com/r/bitnami/centos-extas/)
+[![CircleCI](https://circleci.com/gh/bitnami/centos/tree/master.svg?style=shield)](https://circleci.com/gh/bitnami/centos/tree/master)
+[![Docker Hub Automated Build](http://container.checkforupdates.com/badges/bitnami/centos)](https://hub.docker.com/r/bitnami/centos/)
 [![Slack](http://slack.oss.bitnami.com/badge.svg)](http://slack.oss.bitnami.com)
 
-# `bitnami/centos-extas`
+# `bitnami/centos`
 
 ## TL;DR
 
 ```dockerfile
-FROM bitnami/centos-extras:7
+FROM bitnami/centos:7
 ```
 
 ## About
 
-The `bitnami/centos-extras` image is a customized base image for use in Bitnami container images and is built on top of the offical `centos/7` image.
+The `bitnami/centos` image is a customized base image for use in Bitnami container images and is built on top of the offical `centos/7` image.
 
 The `Dockerfile` installs [Nami](https://github.com/bitnami/nami) and includes a `bitnami-pkg` helper script to simplify downloading of Nami modules from the Bitnami package repositories. Additionally the `Dockerfile` installs [tini](https://github.com/krallin/tini)  and is used in the default [entrypoint](../../blob/master/rootfs/entrypoint.sh).
 
@@ -22,8 +22,8 @@ The image is available in the following variants:
 
 |                  Image                   |                    Configuration                    |
 |------------------------------------------|-----------------------------------------------------|
-| bitnami/centos-extas:7                   | Standard                                            |
-| bitnami/centos-extas:7-buildpack         | Buildpack (includes `build-essential`, `git`, etc.) |
+| bitnami/centos:7                         | Standard                                            |
+| bitnami/centos:7-buildpack               | Buildpack (includes `build-essential`, `git`, etc.) |
 
 ## Usage
 
@@ -32,7 +32,7 @@ Use like a regular base image.
 The following example uses the `bitnami-pkg` tool to install `nami` packages published by Bitnami.
 
 ```dockerfile
-FROM bitnami/centos-extas:7
+FROM bitnami/centos:7
 ENV BITNAMI_APP_NAME=apache
 RUN bitnami-pkg install apache-2.4.25-0
 CMD ["nami", "start", "--foreground", "apache"]
