@@ -1,4 +1,4 @@
-FROM tompizmor/centos-extras:7
+FROM bitnami/centos:7
 
 ENV PATH="/opt/bitnami/git/bin:$PATH"
 

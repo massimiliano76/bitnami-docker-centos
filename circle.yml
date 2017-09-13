@@ -7,7 +7,7 @@ jobs:
         environment:
           RELEASE_SERIES_LIST: "7"
           LATEST_STABLE: "7"
-          IMAGE_NAME: centos-extras
+          IMAGE_NAME: centos
           DOCKER_PROJECT: tompizmor
           QUAY_PROJECT: tompizmor
           #GCLOUD_PROJECT: bitnami-containers
@@ -45,6 +45,8 @@ jobs:
       - deploy:
           name: Publish docker image
           command: |
+            echo "CIRCLE_TAG is $CIRCLE_TAG"
+            echo "CIRCLE_BRANCH is $CIRCLE_BRANCH"
             if [ -n "${CIRCLE_TAG}" ]; then
               curl -sL https://raw.githubusercontent.com/bitnami/test-infra/master/circle/docker-release-image.sh | bash -
             elif [ "${CIRCLE_BRANCH}" == "master" ]; then
