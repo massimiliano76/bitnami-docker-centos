@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/bitnami/centos/tree/master.svg?style=shield)](https://circleci.com/gh/bitnami/centos/tree/master)
+[![CircleCI](https://circleci.com/gh/bitnami/bitnami-docker-centos/tree/master.svg?style=shield)](https://circleci.com/gh/bitnami/bitnami-docker-centos/tree/master)
 [![Docker Hub Automated Build](http://container.checkforupdates.com/badges/bitnami/centos)](https://hub.docker.com/r/bitnami/centos/)
 [![Slack](http://slack.oss.bitnami.com/badge.svg)](http://slack.oss.bitnami.com)
 
