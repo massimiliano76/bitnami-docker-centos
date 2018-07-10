@@ -1,7 +1,7 @@
 FROM centos:7
 LABEL maintainer "Bitnami <containers@bitnami.com>"
 
-RUN yum install -y curl bsdtar ca-certificates
+RUN yum install -y curl ca-certificates
 
 ENV NAMI_VERSION=0.0.8-0
 
