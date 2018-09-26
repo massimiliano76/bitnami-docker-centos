@@ -3,7 +3,7 @@ LABEL maintainer "Bitnami <containers@bitnami.com>"
 
 RUN yum install -y curl ca-certificates
 
-ENV NAMI_VERSION=0.0.9-0
+ENV NAMI_VERSION=1.0.0-1
 
 RUN cd /tmp && \
   curl -sSLO https://nami-prod.s3.amazonaws.com/tools/nami/releases/nami-$NAMI_VERSION-linux-x64.tar.gz && \
@@ -36,7 +36,7 @@ RUN cd /tmp && \
   rm gosu.asc
 
 ENV PATH=/opt/bitnami/nami/bin:$PATH
-ENV BITNAMI_IMAGE_VERSION=7-r2
+ENV BITNAMI_IMAGE_VERSION=7-r3
 
 COPY rootfs /
 ENTRYPOINT ["/entrypoint.sh"]
