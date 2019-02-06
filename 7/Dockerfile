@@ -35,8 +35,10 @@ RUN cd /tmp && \
   chmod +x /usr/local/bin/gosu && \
   rm gosu.asc
 
+RUN yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+
 ENV PATH=/opt/bitnami/nami/bin:$PATH
-ENV BITNAMI_IMAGE_VERSION=7-r3
+ENV BITNAMI_IMAGE_VERSION=7-r4
 
 COPY rootfs /
 ENTRYPOINT ["/entrypoint.sh"]
